@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    img{
+      display: block;
+      margin: 5px auto;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+  </div>
+  <script>
+
+    for(i=0;i<5;i++){
+      $(".container").append('<img src="img/ninja'+[i]+'.png" data-alt-src="img/cat'+[i]+'.png"/>')
+    }
+
+    $('img').click(function() {
+        var temp = $(this).attr('src')
+        $(this).attr('src',$(this).attr('data-alt-src'))
+        $(this).attr('data-alt-src',temp)
+      });
+      //
+    //   var data = $(this).attr('data-alt-src').split('')
+    //   var img = $(this).attr('data-alt-src').slice(0,-5)
+    //   console.log(img)
+    //   var num= parseInt(data[5]);
+    //   console.log(num)
+    //   if(img=="ninja"){
+    //     $(this).replaceWith('<img src="img/'+image.c+num+'.png" data-alt-src="'+image.c+num+'.png"/>')
+
+    //   }
+    //   if(img=="cat"){
+    //     $(this).replaceWith('<img src="img/'+image.n+num+'.png" data-alt-src="'+image.n+num+'.png"/>')
+    //   }
+  </script>
+</body>
+</html>
